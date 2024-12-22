@@ -5,6 +5,8 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlType;
 
+import java.util.Date;
+
 
 /**
  * <p>Java class for compte complex type</p>.
@@ -29,12 +31,14 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "compte", propOrder = {
     "code",
-    "solde"
+    "solde",
+    "dateCreation"
 })
 public class Compte {
 
     protected int code;
     protected double solde;
+    protected Date dateCreation;
 
     /**
      * Gets the value of the code property.
@@ -67,5 +71,12 @@ public class Compte {
     public void setSolde(double value) {
         this.solde = value;
     }
+
+
+    public Date getDateCreation(){ return dateCreation; }
+
+    public void setDateCreation(Date dateCreation){ this.dateCreation = dateCreation; }
+
+
 
 }
